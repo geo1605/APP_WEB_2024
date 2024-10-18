@@ -1,0 +1,63 @@
+/* Estilos del main, section y footer */
+
+
+/* section */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-style: italic;
+    background-color: burlywood;
+    text-decoration: underline;
+    padding: 3rem;
+}
+
+section p {
+    text-align: justify;
+    margin: 0 1rem 0 1rem;
+}
+
+section img {
+    display: block;
+    width: 32rem;
+    height: 32rem;
+    max-width: 90%;
+    margin: auto;
+}
+section a img {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 5%;
+}
+
+footer {
+    background-color: silver;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+footer a {
+    display: inline-block;
+    height: 1rem;
+    width: auto;
+    padding: 1rem;
+    background-color: cadetblue;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+}
+footer a:hover {
+    background-color: black;
+
+}
+footer a:active {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#btn-menu {
+    display: none;
+}

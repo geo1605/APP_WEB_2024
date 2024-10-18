@@ -1,0 +1,87 @@
+/* Estilos aplicados para crear el menu horizontal en CSS */
+#inicio {
+    background-color: silver;
+    padding: 2rem;
+    margin: 0;
+    height: auto;
+    text-align: center;
+    color: white;
+    font-size: 5vmin; /*importante*/
+    font-style: italic;
+    font-weight: bold;
+}
+header {
+    background-color: cadetblue;
+    width: 100%;
+    position: sticky; /*importante*/
+    top: 0;
+}
+header label {
+    width: 2rem;
+    height: 2rem;
+    padding: 1rem;
+    border-right: 1px solid white;
+    cursor: pointer;
+    display: none;
+}
+#menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+#menu li {
+    flex-grow: 1;
+    text-align: center;
+    border: 1px solid wheat;
+}
+#menu li a {
+    text-decoration: none;
+    color: white;
+}
+#menu li a:hover {
+    background-color: black;
+
+}
+#menu li a:active {
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+
+/*aplicar los estilos a la barra de navegación con media query para que el menu se culte y sea desplegable*/
+
+@media screen and (max-width:768px) {
+    header label {
+        display: block;
+    }
+
+    #menu {
+        position: absolute;
+        background-color: cadetblue;
+        width: 20%;
+        margin-left: -20%;
+        transition: all 0.5s;
+    }
+    #menu ul {
+        flex-direction: column;
+    }
+
+    #menu ul li {
+        text-align: left;
+    }
+
+    /*utilizar el input a traves del label para controlar el menu */
+    #btn-menu:checked ~ #menu{
+        margin-left: 0;
+    }
+    main {
+        margin: 1rem;
+    }
+    main p {
+        margin: 1rem;
+    }
+
+}
+
+
+
