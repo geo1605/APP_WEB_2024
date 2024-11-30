@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}
+        {% endblock title %}</title>
+        <link rel="stylesheet" href="{% static 'css/estilos.css' %}" type="text/css">
+</head>
+<body>
+    <header>
+    <div id="logotipo">
+        <img src="{% static "img/logodjango.webp" %}" alt="Imagen Django" title="Django">
+        <h1>Django Proyecto Web</h1>
+    </div>
+    </header>
+    <nav>
+        <ul><li><a href="{% url "inicio" %}">Inicio</a></li>
+        <li><a href="{% url "mision" %}">Mision</a></li>
+        <li><a href="{% url "vision" %}">Vision</a></li>
+        <li><a href="{% url "acercade" %}">acerca de</a></li>
+        <li><a href="{% url "registro" %}">registro</a></li>
+        <li><a href="{% url "login" %}">iniciar sesion</a></li>
+
+    </ul>
+    </nav>
+    <section id="content">
+        <div class="box">
+            {% block content %}{% endblock content %}
+        </div>
+     </section>
+     <footer>
+        <p> Geovany Arenas &copy; 2024 | Visitado el: {% now "Y-m-d H:i" %}</p>
+    </footer>
+</body>
+</html>
